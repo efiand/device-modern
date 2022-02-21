@@ -149,6 +149,8 @@
 				"source/layouts/**/*.js"
 			],
 			"rules": {
+				"max-len": "off",
+				"max-lines-per-function": "off",
 				"no-unused-expressions": "off"
 			}
 		}
