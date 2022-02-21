@@ -1,13 +1,27 @@
 (_data, Util) => {
-	Util.addBlankLinks = (item) => ({
+	Util.addBlankLink = (item) => ({
 		...item,
 		href: 'blank.html'
 	});
 
 	const phoneNumber = '+7 (812) 812-12-12';
+	const action = 'https://echo.htmlacademy.ru';
 
 	return {
+		action,
 		address: 'Санкт-Петербург, набережная реки Карповки, 5, литера П.',
+		breadcrumbs: {
+			list: [
+				{
+					href: 'index.html',
+					title: 'Главная'
+				}
+			]
+		},
+		developer: {
+			href: 'https://htmlacademy.ru/',
+			title: 'Разработано в HTML Academy'
+		},
 		heading: 'Страница в разработке!',
 		lang: 'ru',
 		mainMenu: {
@@ -32,7 +46,7 @@
 						{
 							title: 'Квадрокоптеры'
 						}
-					].map(Util.addBlankLinks),
+					].map(Util.addBlankLink),
 					title: 'Каталог товаров'
 				},
 				{
@@ -44,11 +58,11 @@
 				{
 					title: 'Контакты'
 				}
-			].map(Util.addBlankLinks)
+			].map(Util.addBlankLink)
 		},
 		projectName: 'Device',
 		searchForm: {
-			action: 'https://echo.htmlacademy.ru',
+			action,
 			fields: [
 				{
 					label: 'Поиск',
@@ -57,6 +71,25 @@
 				}
 			],
 			submitText: 'Найти'
+		},
+		social: {
+			list: [
+				{
+					href: 'https://www.facebook.com/htmlacademy',
+					id: 'facebook',
+					title: 'Facebook'
+				},
+				{
+					href: 'https://www.instagram.com/htmlacademy/',
+					id: 'instagram',
+					title: 'Instagram'
+				},
+				{
+					href: 'https://twitter.com/htmlacademy_ru',
+					id: 'twitter',
+					title: 'Twitter'
+				}
+			]
 		},
 		tel: {
 			formattedValue: phoneNumber,
@@ -76,7 +109,7 @@
 					label: '2',
 					title: 'Корзина'
 				}
-			].map(Util.addBlankLinks)
+			].map(Util.addBlankLink)
 		}
 	};
 };

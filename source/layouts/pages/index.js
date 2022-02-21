@@ -1,6 +1,4 @@
-(data) => {
-	const { addBlankLinks } = data;
-
+(data, Util) => {
 	return {
 		accentLink: {
 			href: 'blank.html',
@@ -120,7 +118,7 @@
 				{
 					title: 'Кредит'
 				}
-			].map(addBlankLinks)
+			].map(Util.addBlankLink)
 		},
 		subscribeInfo: {
 			content: 'Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.',
