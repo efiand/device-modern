@@ -16,14 +16,18 @@ module.exports = () => ({
 			};
 
 			// Перечитываем код логики проекта при каждом изменении
-			data = await ServerUtil.modifyData(data, `${layoutsDir}/main.js`);
+			data = await ServerUtil.modifyData(`${layoutsDir}/main.js`, data);
 
 			// Перечитываем код логики страницы при каждом изменении
-			data = await ServerUtil.modifyData(data, `${layoutsDir}/pages/${page}.js`);
+			data = await ServerUtil.modifyData(`${layoutsDir}/pages/${page}.js`, data);
 
 			return parser(ServerUtil.renderNjk(render(tree), data));
 		})(),
-		require('posthtml-w3c')(),
-		require('htmlnano')({ collapseWhitespace: 'aggressive' })
+		// require('posthtml-w3c')(),
+		require('htmlnano')({ collapseWhitespace: 'aggressive' }),
+		(() => (tree) => {
+			const html = render(tree).replace(/\/dt><dd/g, '/dt> <dd');
+			return parser(html);
+		})()
 	]
 });

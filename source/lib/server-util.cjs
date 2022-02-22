@@ -4,7 +4,7 @@ const { readFile } = require('fs').promises;
 const Util = require('./util.cjs');
 
 module.exports = {
-	async modifyData(payload = {}, filePath) {
+	async modifyData(filePath, payload = {}) {
 		let data = {
 			errors: [],
 			...payload
@@ -18,17 +18,21 @@ module.exports = {
 			};
 		} catch (err) {
 			data.errors.push(err);
-		} finally {
-			return data;
 		}
+
+		return data;
 	},
 	renderNjk(template = '', data = {}) {
 		const env = nunjucks.configure('source', { autoescape: false });
+
 		env.addExtension('WithExtension', new WithExtension());
-		env.addGlobal('getContext', function () {
-			return this.ctx;
+
+		env.addGlobal('getContext', function getContext(key = null, global = false) {
+			const ctx = global ? data : this.ctx; // eslint-disable-line
+			return key ? ctx[key] : ctx;
 		});
-		env.addGlobal('getGlobal', (key) => data[key]);
+		env.addGlobal('getComponentPath', (componentName) => `components/${componentName}/${componentName}.njk`);
+
 		env.addFilter('keys', Object.keys);
 		for (const utilName of Object.keys(Util)) {
 			env.addFilter(utilName, Util[utilName]);

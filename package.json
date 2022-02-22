@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=production gulp build",
+    "dev": "cross-env NODE_ENV=development gulp",
+		"start": "npm run dev",
     "test": "gulp test"
   },
   "browserslist": [

@@ -1,0 +1,20 @@
+<header class="centerer page-header">
+	{% set cssMix = "page-header__logo" %}
+	{% include getComponentPath("logo") %}
+
+	{% with searchForm %}
+		{% include getComponentPath("search-form") %}
+	{% endwith %}
+
+	{% with userMenu | setProp("cssMix", "page-header__user-nav") %}
+		{% include getComponentPath("user-nav") %}
+	{% endwith %}
+
+	{% with catalogMenu | setProp("cssMix", "page-header__catalog-nav") %}
+		{% include getComponentPath("catalog-nav") %}
+	{% endwith %}
+
+	{% with mainMenu | setProp("cssMix", "page-header__main-nav") %}
+		{% include getComponentPath("main-nav") %}
+	{% endwith %}
+</header>

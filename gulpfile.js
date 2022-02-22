@@ -39,7 +39,7 @@ const Path = {
 		ICONS: 'place/icons/**/*.{svg,png}',
 		IMG: 'place/images/**/*.{svg,png,jpg}',
 		IMG_DEST: 'public/images/**/*.{png,jpg}',
-		JS: ['*.{js,cjs}', 'source/**/*.js'],
+		JS: ['*.{js,cjs}', 'source/**/*.{js,cjs}'],
 		PP: 'source/pixelperfect/*.{jpg,png,svg}',
 		SPRITE: 'source/icons/*.svg'
 	}

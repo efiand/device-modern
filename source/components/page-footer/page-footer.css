@@ -1,0 +1,8 @@
+.page-footer {
+	color: var(--color-white);
+	background-color: var(--color-black);
+}
+
+.page-footer__inner {
+	display: flex;
+}

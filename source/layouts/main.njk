@@ -12,17 +12,30 @@
 		{% if isDev %}
 			<link href="styles/dev.min.css" rel="stylesheet">
 		{% endif %}
+
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<meta name="apple-mobile-web-app-title" content="Device">
+		<meta name="application-name" content="Device">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body class="page">
+		{% include getComponentPath("page-header") %}
+
 		<main>
 			{% block main %}
-				<h1>{{ heading }}</h1>
-				<p>{{ title }}</p>
+				<section class="section content centerer">
+					<h1>{{ heading }}</h1>
+					<p>{{ title }}</p>
+				</section>
 			{% endblock %}
 		</main>
 
-		<footer class="page__footer">
-		</footer>
+		{% set cssMix = "page__footer" %}
+		{% include getComponentPath("page-footer") %}
 
 		{% if isDev %}
 			<ul hidden>

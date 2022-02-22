@@ -1,12 +1,29 @@
 html {
-	--color-base: #000000;
-	--color-contrast: #ffffff;
-	--color-contrast-30: rgba(255, 255, 255, 0.3);
-	min-width: 320px;
+	--color-black: #000000;
+	--color-black-30: rgba(0, 0, 0, 0.3);
+	--color-black-10: rgba(0, 0, 0, 0.1);
+	--color-dark: #444444;
+	--color-gray: #dcdcdc;
+	--color-light-gray: #ebebeb;
+	--color-light: #f0f0f0;
+	--color-white: #ffffff;
+	--color-white-30: rgba(255, 255, 255, 0.3);
+	--color-yellow: #ffe17f;
+	--color-yelllow-dark: #ffc700;
+	--color-select: #af4fff;
+	--color-status-error: #ff3d3d;
+	--color-status-warning: #fd912e;
+	--color-status-success: #08af00;
+	--font-basic: "Rubik", "Arial", sans-serif;
+	--font-accent: "Raleway", "Arial", sans-serif;
+	--focus-outline: 2px solid var(--color-select);
+	min-width: 1240px;
 	overflow-y: scroll;
 	overflow-anchor: none;
 	scroll-behavior: smooth;
-	font-size: 16px;
+	font-size: 18px;
+	line-height: 1.166667;
+	font-family: var(--font-basic);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: transparent;
@@ -37,6 +54,7 @@ a {
 }
 
 button {
+	font-family: inherit;
 	color: inherit;
 	border: none;
 }
@@ -77,8 +95,11 @@ input {
 	}
 
 	&::placeholder {
-		color: inherit;
-		opacity: 0.6;
+		opacity: 0.3;
+	}
+
+	&:disabled {
+		opacity: 0.3;
 	}
 }
 
@@ -108,12 +129,14 @@ wbr::after {
 
 :focus {
 	outline: var(--focus-outline);
+	outline-offset: 2px;
 
-	@supports selector(&-visible) {
+	@supports selector(:focus-visible) {
 		outline: none;
 	}
 
 	&-visible {
 		outline: var(--focus-outline);
+		outline-offset: 2px;
 	}
 }

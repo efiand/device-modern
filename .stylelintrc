@@ -173,82 +173,6 @@
 		"number-leading-zero": "always",
 		"number-max-precision": 6,
 		"number-no-trailing-zeros": true,
-		"property-case": "lower",
-		"property-no-unknown": true,
-		"property-no-vendor-prefix": [
-			true,
-			{
-				"ignoreProperties": [
-					"/touch/"
-				]
-			}
-		],
-		"rule-empty-line-before": [
-			"always",
-			{
-				"except": [
-					"after-single-line-comment",
-					"first-nested"
-				]
-			}
-		],
-		"selector-attribute-brackets-space-inside": "never",
-		"selector-attribute-operator-space-after": "never",
-		"selector-attribute-operator-space-before": "never",
-		"selector-attribute-quotes": "always",
-		"selector-combinator-space-after": "always",
-		"selector-combinator-space-before": "always",
-		"selector-descendant-combinator-no-non-space": true,
-		"selector-list-comma-newline-after": "always",
-		"selector-list-comma-newline-before": "never-multi-line",
-		"selector-list-comma-space-after": "always-single-line",
-		"selector-list-comma-space-before": "never",
-		"selector-max-class": 3,
-		"selector-max-combinators": 2,
-		"selector-max-compound-selectors": 3,
-		"selector-max-empty-lines": 0,
-		"selector-max-id": 0,
-		"selector-max-pseudo-class": 2,
-		"selector-max-specificity": "0,5,1",
-		"selector-max-universal": 0,
-		"selector-no-qualifying-type": [
-			true,
-			{
-				"ignore": [
-					"attribute",
-					"class"
-				]
-			}
-		],
-		"selector-no-vendor-prefix": true,
-		"selector-pseudo-class-case": "lower",
-		"selector-pseudo-class-no-unknown": true,
-		"selector-pseudo-class-parentheses-space-inside": "never",
-		"selector-pseudo-element-case": "lower",
-		"selector-pseudo-element-colon-notation": "double",
-		"selector-pseudo-element-no-unknown": true,
-		"selector-type-case": "lower",
-		"selector-type-no-unknown": true,
-		"shorthand-property-no-redundant-values": true,
-		"string-no-newline": true,
-		"string-quotes": "double",
-		"time-min-milliseconds": 100,
-		"unicode-bom": "never",
-		"unit-disallowed-list": [
-			"ex",
-			"pt",
-			"pc",
-			"ms"
-		],
-		"unit-case": "lower",
-		"unit-no-unknown": true,
-		"value-keyword-case": "lower",
-		"value-list-comma-newline-after": "always-multi-line",
-		"value-list-comma-newline-before": "never-multi-line",
-		"value-list-comma-space-after": "always-single-line",
-		"value-list-comma-space-before": "never",
-		"value-list-max-empty-lines": 0,
-		"value-no-vendor-prefix": true,
 		"order/properties-order": [
 			"content",
 			"quotes",
@@ -487,6 +411,82 @@
 			"touch-action",
 			"appearance",
 			"will-change"
-		]
+		],
+		"property-case": "lower",
+		"property-no-unknown": true,
+		"property-no-vendor-prefix": [
+			true,
+			{
+				"ignoreProperties": [
+					"/touch/"
+				]
+			}
+		],
+		"rule-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"after-single-line-comment",
+					"first-nested"
+				]
+			}
+		],
+		"selector-attribute-brackets-space-inside": "never",
+		"selector-attribute-operator-space-after": "never",
+		"selector-attribute-operator-space-before": "never",
+		"selector-attribute-quotes": "always",
+		"selector-combinator-space-after": "always",
+		"selector-combinator-space-before": "always",
+		"selector-descendant-combinator-no-non-space": true,
+		"selector-list-comma-newline-after": "always",
+		"selector-list-comma-newline-before": "never-multi-line",
+		"selector-list-comma-space-after": "always-single-line",
+		"selector-list-comma-space-before": "never",
+		"selector-max-class": 3,
+		"selector-max-combinators": 2,
+		"selector-max-compound-selectors": 3,
+		"selector-max-empty-lines": 0,
+		"selector-max-id": 0,
+		"selector-max-pseudo-class": 2,
+		"selector-max-specificity": "0,5,1",
+		"selector-max-universal": 0,
+		"selector-no-qualifying-type": [
+			true,
+			{
+				"ignore": [
+					"attribute",
+					"class"
+				]
+			}
+		],
+		"selector-no-vendor-prefix": true,
+		"selector-pseudo-class-case": "lower",
+		"selector-pseudo-class-no-unknown": true,
+		"selector-pseudo-class-parentheses-space-inside": "never",
+		"selector-pseudo-element-case": "lower",
+		"selector-pseudo-element-colon-notation": "double",
+		"selector-pseudo-element-no-unknown": true,
+		"selector-type-case": "lower",
+		"selector-type-no-unknown": true,
+		"shorthand-property-no-redundant-values": true,
+		"string-no-newline": true,
+		"string-quotes": "double",
+		"time-min-milliseconds": 100,
+		"unicode-bom": "never",
+		"unit-disallowed-list": [
+			"ex",
+			"pt",
+			"pc",
+			"ms"
+		],
+		"unit-case": "lower",
+		"unit-no-unknown": true,
+		"value-keyword-case": "lower",
+		"value-list-comma-newline-after": "always-multi-line",
+		"value-list-comma-newline-before": "never-multi-line",
+		"value-list-comma-space-after": "always-single-line",
+		"value-list-comma-space-before": "never",
+		"value-list-max-empty-lines": 0,
+		"value-no-vendor-prefix": true
 	}
 }

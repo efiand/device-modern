@@ -42,9 +42,6 @@
 		},
 		heading: 'Device',
 		promo: {
-			labels: {
-				dateilsLink: 'Подробнее'
-			},
 			list: [
 				{
 					content: '<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>',
@@ -91,7 +88,16 @@
 						}
 					]
 				}
-			]
+			].map((item, i) => ({
+				...Util.addBlankLink(item),
+				detailsTitle: 'Подробнее',
+				image: {
+					alt: item.alt || '',
+					height: '560',
+					src: `images/slide-${i + 1}.png`,
+					width: '560'
+				}
+			}))
 		},
 		services: {
 			list: [

@@ -1,5 +1,11 @@
 (data, Util) => {
-	const { action } = data;
+	const { action, userMenu } = data;
+	const [profileLink] = userMenu.list;
+	profileLink.title = 'Коля Петухов'; // На данном этапе ТЗ требует показать шапку для авторизованного пользователя на этой странице
+	profileLink.extend = {
+		href: 'index.html',
+		title: 'Выйти'
+	};
 
 	return {
 		breadcrumbs: {
@@ -111,7 +117,7 @@
 				image: {
 					alt: item.alt || '',
 					height: '380',
-					src: `images/good-${i + 1}.jpg`,
+					src: `images/product-${i + 1}.jpg`,
 					width: '360'
 				}
 			})),

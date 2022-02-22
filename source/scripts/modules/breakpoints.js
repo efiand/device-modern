@@ -1,5 +1,5 @@
-const Breakpoint = {
-	DESKTOP: 1280,
+export const Breakpoint = {
+	DESKTOP: 1240,
 	TABLET: 768
 };
 
