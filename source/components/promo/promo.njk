@@ -1,3 +1,50 @@
-<section class="promo section centerer">
+<section class="promo centerer">
 	<h2 class="visually-hidden">{{ heading }}</h2>
+
+	<ul class="promo__list {{ 'promo__list--js' if js }}">
+		{% for slide in list %}
+			<li class="promo__item {{ 'promo__item--active' if not js or not loop.index0 }}">
+				<h3 class="visually-hidden">{{ slide.heading }}</h3>
+
+				{% with slide.image %}
+					{% include getComponentPath("picture") %}
+				{% endwith %}
+
+				<div class="promo__content">
+					<b class="promo__lead">{{ slide.lead }}</b>
+					<div class="content">
+						{{ slide.content }}
+					</div>
+
+					<div class="promo__footer">
+						<a class="button promo__button" href="{{ detailsHref }}">{{ detailsTitle }}</a>
+
+						<dl class="promo__params">
+							{% for param in slide.params %}
+								<div class="promo__param">
+									<dt class="promo__key">{{ param.key }}</dt>
+									<dd class="promo__value">{{ param.value }}</dd>
+								</div>
+							{% endfor %}
+						</dl>
+					</div>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+
+	{% if js %}
+		<button class="promo__prev" type="button" aria-label="{{ prevTitle }}"></button>
+		<button class="promo__next" type="button" aria-label="{{ nextTitle }}"></button>
+
+		<ul class="promo__dots">
+			{% for i in list %}
+				<li class="promo__dot">
+					<button class="promo__dotlink {{ 'promo__dotlink--active' if loop.index == 1 }}" type="button">
+						<span class="visually-hidden">{{ dotTitle }} {{ loop.index }}</span>
+					</button>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 </section>

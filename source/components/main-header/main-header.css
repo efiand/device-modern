@@ -1,0 +1,12 @@
+.main-header {
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+
+.main-header__heading {
+	margin-bottom: 0;
+}
+
+.main-header__breadcrumbs {
+	margin: 0;
+}

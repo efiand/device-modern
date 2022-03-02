@@ -1,5 +1,8 @@
 (data, Util) => {
 	const { action, userMenu } = data;
+	const heading = 'Моноподы для селфи';
+	const title = 'Каталог товаров';
+
 	const [profileLink] = userMenu.list;
 	profileLink.title = 'Коля Петухов'; // На данном этапе ТЗ требует показать шапку для авторизованного пользователя на этой странице
 	profileLink.extend = {
@@ -8,18 +11,15 @@
 	};
 
 	return {
-		breadcrumbs: {
-			list: [
-				...data.breadcrumbs.list,
-				{
-					href: 'catalog.html',
-					title: 'Каталог товаров'
-				},
-				{
-					title: 'Моноподы для селфи'
-				}
-			]
-		},
+		breadcrumbsTail: [
+			{
+				href: 'catalog.html',
+				title
+			},
+			{
+				title: heading
+			}
+		],
 		catalog: {
 			action,
 			filter: {
@@ -146,7 +146,7 @@
 				name: 'sorting'
 			}
 		},
-		heading: 'Моноподы для селфи',
+		heading,
 		moreButton: {
 			name: 'limit',
 			title: 'Загрузить ещё',
@@ -168,6 +168,6 @@
 				title: 'Назад'
 			}
 		},
-		title: 'Каталог'
+		title
 	};
 };

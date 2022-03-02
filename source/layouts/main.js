@@ -52,7 +52,7 @@
 				width: '115'
 			}
 		},
-		heading: 'Страница в разработке!',
+		heading: 'Страница в разработке',
 		lang: 'ru',
 		logo: {
 			alt: 'Логотип Device',
@@ -75,13 +75,21 @@
 				}
 			].map(Util.addBlankLink)
 		},
+		postProcess({ breadcrumbs, breadcrumbsTail, title }) {
+			breadcrumbs.list = [
+				...breadcrumbs.list,
+				...breadcrumbsTail || [{ title }]
+			];
+		},
 		projectName: 'Device',
 		promo: {
+			detailsHref: 'promo.html',
+			detailsTitle: 'Подробнее',
+			dotTitle: 'К слайду №',
 			heading: 'Промо-слайдер',
 			list: [
 				{
 					content: '<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>',
-					heading: '',
 					lead: 'Порхает как бабочка, жалит как пчела!',
 					params: [
 						{
@@ -96,7 +104,6 @@
 				},
 				{
 					content: '<p></p>',
-					heading: '',
 					lead: '',
 					params: [
 						{
@@ -111,7 +118,6 @@
 				},
 				{
 					content: '',
-					heading: '',
 					lead: '',
 					params: [
 						{
@@ -124,17 +130,22 @@
 						}
 					]
 				}
-			].map((item, i) => ({
-				...item,
-				detailsHref: 'promo.html',
-				detailsTitle: 'Подробнее',
-				image: {
-					alt: item.alt || '',
-					height: '560',
-					src: `images/slide-${i + 1}.png`,
-					width: '560'
-				}
-			}))
+			].map((item, i) => {
+				const num = i + 1;
+
+				return {
+					...item,
+					heading: `Товар ${num}`,
+					image: {
+						alt: item.alt || '',
+						height: '560',
+						src: `images/slide-${num}.png`,
+						width: '560'
+					}
+				};
+			}),
+			nextTitle: 'Следующий слайд',
+			prevTitle: 'Предыдущий слайд'
 		},
 		searchForm: {
 			action,
@@ -168,7 +179,7 @@
 			shortTitle: 'Тел.',
 			value: Util.numberize(phoneNumber)
 		},
-		title: 'Страница в разработке',
+		title: 'В разработке',
 		userMenu: {
 			list: [
 				{

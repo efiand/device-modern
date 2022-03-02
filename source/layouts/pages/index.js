@@ -1,4 +1,6 @@
 (data, Util) => {
+	data.promo.js = true;
+
 	return {
 		accentLink: {
 			href: 'blank.html',

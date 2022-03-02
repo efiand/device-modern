@@ -1,0 +1,16 @@
+.promo {
+	position: relative;
+	margin-top: 0;
+}
+
+.promo__list {
+	margin: 0;
+}
+
+.promo__item {
+	display: none;
+
+	&--active {
+		display: grid;
+	}
+}

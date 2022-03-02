@@ -25,6 +25,10 @@ module.exports = () => ({
 			// Перечитываем код логики страницы при каждом изменении
 			data = await ServerUtil.modifyData(`${layoutsDir}/pages/${page}.js`, data);
 
+			if (typeof data.postProcess === 'function') {
+				data.postProcess(data);
+			}
+
 			return parser(ServerUtil.renderNjk(render(tree), data));
 		})(),
 		require('htmlnano')({ collapseWhitespace: 'aggressive' }),
