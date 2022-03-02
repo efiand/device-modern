@@ -41,64 +41,6 @@
 			heading: 'О нас'
 		},
 		heading: 'Device',
-		promo: {
-			list: [
-				{
-					content: '<p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>',
-					heading: '',
-					lead: 'Порхает как бабочка, жалит как пчела!',
-					params: [
-						{
-							key: 'Дальность полета',
-							value: '800 м'
-						},
-						{
-							key: 'Радиус поражения',
-							value: '50 м'
-						}
-					]
-				},
-				{
-					content: '<p></p>',
-					heading: '',
-					lead: '',
-					params: [
-						{
-							key: '',
-							value: ''
-						},
-						{
-							key: '',
-							value: ''
-						}
-					]
-				},
-				{
-					content: '',
-					heading: '',
-					lead: '',
-					params: [
-						{
-							key: '',
-							value: ''
-						},
-						{
-							key: '',
-							value: ''
-						}
-					]
-				}
-			].map((item, i) => ({
-				...Util.addBlankLink(item),
-				detailsTitle: 'Подробнее',
-				image: {
-					alt: item.alt || '',
-					height: '560',
-					src: `images/slide-${i + 1}.png`,
-					width: '560'
-				}
-			}))
-		},
 		services: {
 			list: [
 				{
