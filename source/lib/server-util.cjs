@@ -22,6 +22,7 @@ const Severity = {
 		title: 'ERROR'
 	}
 };
+const W3C_TIMEOUT = 1000;
 
 module.exports = {
 	log,
@@ -63,13 +64,19 @@ module.exports = {
 	},
 	async validateHtml(html, page) {
 		let output = '';
+		const controller = new AbortController();
+		setTimeout(() => {
+			controller.abort();
+		}, W3C_TIMEOUT);
 
 		try {
 			// Онлайн-валидатор HTML
+
 			const validRes = await fetch('https://validator.nu/?out=json', {
 				body: html,
 				headers: { 'Content-Type': 'text/html' },
-				method: 'POST'
+				method: 'POST',
+				signal: controller.signal
 			});
 			const { messages = [] } = await validRes.json();
 			messages.forEach(({ extract, firstColumn, lastLine, message, type }) => {
@@ -81,6 +88,7 @@ module.exports = {
 			});
 		} catch (err) {
 			// Оффлайн-валидатор HTML
+
 			const report = validateHtml.validateString(html, require('../../.htmlvalidate.json'));
 
 			report.results.forEach(({ messages }) => {
