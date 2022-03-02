@@ -1,13 +1,14 @@
 html {
 	--color-black: #000000;
 	--color-black-30: rgba(0, 0, 0, 0.3);
-	--color-black-10: rgba(0, 0, 0, 0.1);
+	--color-black-alter: #1a1a1a;
 	--color-dark: #444444;
 	--color-gray: #dcdcdc;
 	--color-light-gray: #ebebeb;
 	--color-light: #f0f0f0;
 	--color-white: #ffffff;
 	--color-white-30: rgba(255, 255, 255, 0.3);
+	--color-white-10: rgba(255, 255, 255, 0.1);
 	--color-yellow: #ffe17f;
 	--color-yelllow-dark: #ffc700;
 	--color-select: #af4fff;

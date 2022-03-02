@@ -128,13 +128,14 @@
 					popover: {
 						list: [
 							{
-								title: 'Любительская селфи-палка'
+								title: 'Любительская<br>селфи-палка'
 							},
 							{
-								title: 'Профессиональная селфи-палка'
+								title: 'Профессиональная<br>селфи-палка'
 							}
 						].map((item, i) => ({
-							...Util.addBlankLink(item),
+							...item,
+							href: 'cart.html',
 							hrefToRemove: 'blank.html',
 							image: {
 								height: 43,
@@ -143,17 +144,18 @@
 								width: 39
 							}
 						})),
-						openLink: Util.addBlankLink({
+						openLink: {
+							href: 'cart.html',
 							title: 'Открыть корзину'
-						}),
+						},
 						params: [
-							{
-								key: 'Сумма',
-								value: '2000 ₽'
-							},
 							{
 								key: 'Товаров',
 								value: 2
+							},
+							{
+								key: 'Сумма',
+								value: '2000 ₽'
 							}
 						],
 						titleToRemove: 'Удалить из корзины'

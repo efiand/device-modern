@@ -10,7 +10,7 @@
 					{% endwith %}
 				</a>
 				<a class="cart__remover" href="{{ link.hrefToRemove }}">
-					{{ ctx.titleToRemove }}
+					<span class="visually-hidden">{{ ctx.titleToRemove }}</span>
 				</a>
 			</li>
 		{% endfor %}
@@ -23,4 +23,6 @@
 			</div>
 		{% endfor %}
 	</dl>
+
+	<a class="cart__button" href="{{ ctx.openLink.href }}">{{ ctx.openLink.title }}</a>
 </div>
