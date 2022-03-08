@@ -3,9 +3,12 @@
 {% block main %}
 	<h1 class="visually-hidden">{{ projectName }}</h1>
 
-	{% with promo %}
+	{% with promo | setProp("cssMix", "centerer") %}
 		{% include getComponentPath("promo") %}
 	{% endwith %}
+
+	{% set cssMix = "centerer" %}
+	{% include getComponentPath("categories") %}
 
 	{% with accentLink | setProp("cssMix", "centerer") %}
 		{% include getComponentPath("promo-button") %}

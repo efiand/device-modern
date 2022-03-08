@@ -84,7 +84,7 @@
 
 	&:hover,
 	&:active  {
-		background-color: var(--color-yellow);
+		background-color: var(--color-yellow-light);
 	}
 
 	&:active,

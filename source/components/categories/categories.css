@@ -1,0 +1,22 @@
+.categories {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 60px 40px;
+	margin-top: 70px;
+}
+
+.categories__link {
+	font-weight: 800;
+	line-height: 24px;
+	font-family: var(--font-accent);
+	letter-spacing: -0.02em;
+	text-decoration: none;
+
+	&::before {
+		content: "";
+		display: block;
+		min-height: 160px;
+		margin: 0 0 33px;
+		background-color: var(--color-yellow-light);
+	}
+}

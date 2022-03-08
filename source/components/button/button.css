@@ -1,5 +1,42 @@
 .button {
+	position: relative;
 	box-sizing: border-box;
+	padding: 10px 24px;
+	font-weight: 800;
+	line-height: 20px;
+	font-family: var(--font-accent);
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
+	outline-offset: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 16px;
+		right: 0;
+		bottom: 16px;
+		left: 0;
+		z-index: -1;
+		background-color: var(--color-yellow-light);
+		transition-property: top, bottom, background-color;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-in-out;
+	}
+
+	&:hover::before {
+		top: 0;
+		bottom: 0;
+	}
+
+	&:active::before {
+		top: 0;
+		bottom: 0;
+		background-color: var(--color-yellow-dark);
+	}
+
+	&:disabled {
+		opacity: 0.3;
+	}
 }

@@ -13,7 +13,7 @@
 
 	&::before {
 		content: "";
-		background-color: var(--color-yellow);
+		background-color: var(--color-yellow-light);
 		background-image: url("../images/sprite.min.svg#delivery");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
@@ -34,7 +34,7 @@
 	&:hover,
 	&:active {
 		&::before {
-			background-color: var(--color-yelllow-dark);
+			background-color: var(--color-yellow-dark);
 		}
 
 		& .promo-button__title::after {

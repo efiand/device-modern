@@ -1,0 +1,7 @@
+<ul class="categories {{ cssMix }}">
+	{% for category in categories %}
+		<li class="categories__item">
+			<a class="categories__link" href="{{ category.href }}">{{ category.title }}</a>
+		</li>
+	{% endfor %}
+</ul>
