@@ -49,9 +49,9 @@
 
 .promo-button__title {
 	position: relative;
-	padding: 30px;
+	padding: 42px 30px 38px;
 	font-size: 20px;
-	line-height: 1.174;
+	line-height: 1;
 	font-family: var(--font-accent);
 	letter-spacing: 0.2em;
 	text-transform: uppercase;

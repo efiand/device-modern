@@ -10,6 +10,10 @@
 	{% set cssMix = "centerer" %}
 	{% include getComponentPath("categories") %}
 
+	{% with services %}
+		{% include getComponentPath("services") %}
+	{% endwith %}
+
 	{% with accentLink | setProp("cssMix", "centerer") %}
 		{% include getComponentPath("promo-button") %}
 	{% endwith %}

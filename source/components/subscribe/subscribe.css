@@ -1,0 +1,8 @@
+.subscribe {
+	padding: 56px 0;
+	background-color: var(--color-light);
+}
+
+.subscribe__heading {
+	margin: 0;
+}

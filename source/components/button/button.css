@@ -1,7 +1,7 @@
 .button {
 	position: relative;
 	box-sizing: border-box;
-	padding: 10px 24px;
+	padding: 10px 20px;
 	font-weight: 800;
 	line-height: 20px;
 	font-family: var(--font-accent);
