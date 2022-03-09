@@ -4,7 +4,11 @@ html {
 	--color-black-alter: #1a1a1a;
 	--color-darker: #363636;
 	--color-dark: #444444;
+	--color-dark-50: rgba(68, 68, 68, 0.5);
+	--color-darker-gray: #c4c4c4;
+	--color-dark-gray: #cecece;
 	--color-gray: #dcdcdc;
+	--color-light-gray-alter: #e5e5e5;
 	--color-light-gray: #ebebeb;
 	--color-light: #f0f0f0;
 	--color-white: #ffffff;

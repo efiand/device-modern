@@ -18,7 +18,11 @@
 		{% include getComponentPath("promo-button") %}
 	{% endwith %}
 
-	{% with subscribeInfo %}
+	{% with about | setProp("cssMix", "centerer") %}
+		{% include getComponentPath("about") %}
+	{% endwith %}
+
+	{% with subscribe %}
 		{% include getComponentPath("subscribe") %}
 	{% endwith %}
 {% endblock %}
