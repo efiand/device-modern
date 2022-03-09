@@ -177,7 +177,7 @@
 		},
 		tel: {
 			formattedValue: phoneNumber,
-			shortTitle: 'Тел.',
+			shortTitle: 'Тел.:',
 			value: Util.numberize(phoneNumber)
 		},
 		title: 'В разработке',

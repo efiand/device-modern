@@ -18,6 +18,7 @@ html {
 	--color-yellow-light-60: rgba(255, 225, 127, 0.6);
 	--color-yellow-light-30: rgba(255, 225, 127, 0.3);
 	--color-yellow-dark: #ffc700;
+	--color-yellow-dark-30: rgba(255, 199, 0, 0.3);
 	--color-select: #af4fff;
 	--color-status-error: #ff3d3d;
 	--color-status-warning: #fd912e;
