@@ -21,8 +21,8 @@
 			}
 		],
 		catalog: {
-			action,
 			filter: {
+				action,
 				heading: 'фильтр',
 				list: [
 					{
@@ -37,12 +37,11 @@
 							}
 						].map((field) => ({
 							...field,
-							max: '7000',
-							min: '0',
-							name: 'cost[]',
-							step: '100',
-							type: 'number'
+							name: 'cost[]'
 						})),
+						max: '7000',
+						min: '0',
+						step: '100',
 						title: 'Стоимость'
 					},
 					{
@@ -121,6 +120,27 @@
 					width: '360'
 				}
 			})),
+			moreButton: {
+				name: 'limit',
+				title: 'Загрузить ещё',
+				value: '8'
+			},
+			pager: {
+				list: ['1', '2', '3', '...', '15'].map((item, i) => ({
+					name: 'page',
+					title: item,
+					value: parseInt(item, 10) || i + 1
+				})),
+				next: {
+					name: 'page',
+					title: 'Вперёд',
+					value: '2'
+				},
+				prev: {
+					name: 'page',
+					title: 'Назад'
+				}
+			},
 			sorting: {
 				criteria: [
 					{
@@ -147,27 +167,6 @@
 			}
 		},
 		heading,
-		moreButton: {
-			name: 'limit',
-			title: 'Загрузить ещё',
-			value: '8'
-		},
-		pager: {
-			list: ['1', '2', '3', '...', '15'].map((item, i) => ({
-				name: 'page',
-				title: item,
-				value: parseInt(item, 10) || i + 1
-			})),
-			next: {
-				name: 'page',
-				title: 'Вперёд',
-				value: '2'
-			},
-			prev: {
-				name: 'page',
-				title: 'Назад'
-			}
-		},
 		title
 	};
 };

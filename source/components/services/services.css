@@ -9,8 +9,6 @@
 }
 
 .services__tabs {
-	position: relative;
-	z-index: 1;
 	margin: 64px 0 0;
 }
 

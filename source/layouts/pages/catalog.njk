@@ -2,4 +2,8 @@
 
 {% block main %}
 	{% include getComponentPath("main-header") %}
+
+	{% with catalog %}
+		{% include getComponentPath("catalog") %}
+	{% endwith %}
 {% endblock %}

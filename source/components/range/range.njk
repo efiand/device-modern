@@ -1,0 +1,19 @@
+<div
+	class="range {{ cssMix }} no-js-hidden"
+	data-max="{{ max }}"
+	data-min="{{ min }}"
+	data-step="{{ step }}"
+>
+	{% for item in fields %}
+		<label class="range__group">
+			<input
+				name="{{ name }}"
+				type="hidden"
+				value="{{ item.value }}"
+			/>
+			<span class="range__label">{{ item.title }}</span>
+		</label>
+	{% endfor %}
+
+	<div class="range__slider-target"></div>
+</div>
