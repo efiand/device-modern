@@ -69,6 +69,10 @@
 		& ~ .card__price {
 			opacity: 0.3;
 		}
+
+		& .card__link::before {
+			background-color: var(--color-yellow-dark);
+		}
 	}
 }
 
