@@ -4,7 +4,7 @@
 			<legend class="filter__title">{{ set.title }}</legend>
 
 			{% if set.min %}
-				{% with set %}
+				{% with set | setProp("cssMix", "filter__range")%}
 					{% include getComponentPath("range") %}
 				{% endwith %}
 			{% else %}

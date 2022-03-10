@@ -1,5 +1,6 @@
 import Form from '../components/form/form.js';
 import Modal from '../components/modal/modal.js';
+import Range from '../components/range/range.js';
 import Slider from './modules/slider.js';
 
 export * from './modules/breakpoints.js';
@@ -31,4 +32,8 @@ for (const servicesEl of document.querySelectorAll('.services')) {
 		iClass: 'services__tab-link',
 		slideClass: 'services__content'
 	});
+}
+
+for (const rangeEl of document.querySelectorAll('.range')) {
+	new Range(rangeEl);
 }

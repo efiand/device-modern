@@ -39,7 +39,7 @@
 							...field,
 							name: 'cost[]'
 						})),
-						max: '7000',
+						max: '8400',
 						min: '0',
 						step: '100',
 						title: 'Стоимость'
