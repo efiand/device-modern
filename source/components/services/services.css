@@ -57,11 +57,22 @@
 }
 
 .services__content {
+	position: relative;
 	display: none;
 	padding: 74px 260px 74px 116px;
 
 	&--active {
 		display: block;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 62px;
+		right: 40px;
+		width: 180px;
+		height: 195px;
+		background-image: var(--mask);
 	}
 }
 
