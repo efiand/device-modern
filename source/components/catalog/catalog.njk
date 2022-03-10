@@ -8,11 +8,25 @@
 			{% endwith %}
 		</div>
 		<div>
-			<div class="catalog__sorting">
+			<div class="catalog__header">
 				<h2 class="catalog__heading">{{ sorting.heading | punctify(":") }}</h2>
+
+				{% with sorting %}
+					{% include getComponentPath("sorting") %}
+				{% endwith %}
 			</div>
 
-			<div class="catalog__body"></div>
+			<div class="catalog__body">
+				<ul class="catalog__list">
+					{% for card in list %}
+						<li>
+							{% with card %}
+								{% include getComponentPath("card") %}
+							{% endwith %}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
 		</div>
 	</div>
 </section>

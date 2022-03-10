@@ -1,6 +1,38 @@
+.select {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 10px;
+		right: 0;
+		width: 11px;
+		height: 11px;
+		background-color: currentColor;
+		mask-image: url("../images/sprite.min.svg#arrow");
+		transform: rotate(90deg);
+	}
+}
+
 .select__control {
 	box-sizing: border-box;
 	width: 100%;
+	padding: 0;
+	font-size: inherit;
+	line-height: 30px;
 	background-color: transparent;
+	border: none;
 	appearance: none;
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+
+	&:disabled {
+		opacity: 0.1;
+	}
 }

@@ -99,6 +99,7 @@
 			list: [
 				{
 					heading: 'Любительская селфи-палка',
+					label: 'new',
 					price: '500 ₽'
 				},
 				{
@@ -121,7 +122,8 @@
 					height: '380',
 					src: `images/product-${i + 1}.jpg`,
 					width: '360'
-				}
+				},
+				linkTitle: 'Подробнее'
 			})),
 			moreButton: {
 				name: 'limit',
@@ -145,28 +147,32 @@
 				}
 			},
 			sorting: {
-				criteria: [
-					{
-						title: 'Популярные',
-						value: 'popularity'
-					},
-					{
-						title: 'Дорогие',
-						value: 'cost'
-					}
-				],
+				action,
 				directions: [
 					{
-						title: 'По возрастанию',
+						label: 'По возрастанию',
 						value: 'asc'
 					},
 					{
-						title: 'По убыванию',
+						label: 'По убыванию',
 						value: 'desc'
 					}
 				],
+				dirname: 'direction',
 				heading: 'сортировка',
-				name: 'sorting'
+				select: {
+					name: 'sorting',
+					options: [
+						{
+							title: 'Популярные',
+							value: 'popularity'
+						},
+						{
+							title: 'Дорогие',
+							value: 'cost'
+						}
+					]
+				}
 			}
 		},
 		heading,
