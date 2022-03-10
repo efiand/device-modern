@@ -1,0 +1,71 @@
+.checker__label {
+	position: relative;
+	padding-left: 36px;
+	font-size: 16px;
+	line-height: 19px;
+	transition: opacity 0.2s ease-in-out;
+
+	&:hover {
+		opacity: 0.6;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: -1px;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		border: 2px solid var(--color-dark-gray-alter);
+		border-radius: 3px;
+		transition: border-color 0.2s ease-in-out;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: 5px;
+		width: 10px;
+		height: 10px;
+		background-color: currentColor;
+		mask-image: url("../images/sprite.min.svg#tick");
+		opacity: 0;
+		transition: inherit;
+	}
+
+	&--radio {
+		&::before {
+			border-radius: 50%;
+		}
+
+		&::after {
+			mask-image: url("../images/sprite.min.svg#circle");
+		}
+	}
+}
+
+.checker__input {
+	&:disabled ~ .checker__label {
+		opacity: 0.1;
+	}
+
+	&:focus-visible ~ .checker__label::before {
+		outline: var(--focus-outline);
+		outline-offset: 2px;
+	}
+
+	&:checked ~ .checker__label {
+		&::before {
+			border-color: currentColor;
+		}
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}

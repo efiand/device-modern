@@ -47,10 +47,12 @@
 					{
 						fields: [
 							{
+								checked: true,
 								label: 'Черный',
 								value: 'black'
 							},
 							{
+								checked: true,
 								label: 'Белый',
 								value: 'white'
 							},
@@ -76,6 +78,7 @@
 					{
 						fields: [
 							{
+								checked: true,
 								label: 'Есть',
 								value: '1'
 							},

@@ -1,5 +1,5 @@
 .filter__set {
-	margin: 0 20px 0 0;
+	margin: 0 20px 32px 0;
 	padding: 12px 0 0;
 	border: none;
 	border-top: 2px solid;
@@ -15,4 +15,20 @@
 
 .filter__range {
 	clear: both;
+}
+
+.filter__list {
+	clear: both;
+	margin: 0;
+}
+
+.filter__item {
+	& + & {
+		margin-top: 16px;
+	}
+}
+
+.filter__submit {
+	width: 100%;
+	margin-top: 5px;
 }
