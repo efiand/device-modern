@@ -8,6 +8,7 @@
 					<a
 						class="button services__tab-link {{ 'services__tab-link--active' if loop.index === 1 }}"
 						href="{{ tab.href }}"
+						data-i="{{ loop.index0 }}"
 					>
 						{{ tab.title }}
 					</a>
@@ -16,7 +17,10 @@
 		</ul>
 		<ul class="services__contents">
 			{% for service in list %}
-				<li class="services__content" style="--mask: url(../images/sprite.min.svg#service-{{ loop.index }})">
+				<li
+					class="services__content {{ 'services__content--active' if loop.index === 1 }}"
+					style="--mask: url(../images/sprite.min.svg#service-{{ loop.index }})"
+				>
 					<h3 class="heading services__title">{{ service.title }}</h3>
 					<div class="content">{{ service.content }}</div>
 				</li>

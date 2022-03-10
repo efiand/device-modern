@@ -1,6 +1,13 @@
 .promo {
 	position: relative;
 	margin-top: 0;
+
+	&--nojs {
+		& .promo__item + .promo__item {
+			margin-top: 130px;
+			border-top: 186px solid var(--color-yellow-light);
+		}
+	}
 }
 
 .promo__list {
@@ -9,13 +16,6 @@
 
 	& > li {
 		counter-increment: slider;
-	}
-
-	&--nojs {
-		& .promo__item + .promo__item {
-			margin-top: 130px;
-			border-top: 186px solid var(--color-yellow-light);
-		}
 	}
 }
 
@@ -130,7 +130,7 @@
 }
 
 .promo__control,
-.promo__dotlink {
+.promo__dot-link {
 	padding: 0;
 	background-color: transparent;
 	cursor: pointer;
@@ -163,7 +163,7 @@
 	margin: 20px 0 0 20px;
 }
 
-.promo__dotlink {
+.promo__dot-link {
 	display: block;
 	width: 12px;
 	height: 12px;

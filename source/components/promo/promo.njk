@@ -1,12 +1,22 @@
-<section class="promo {{ cssMix }}">
+<section class="promo {{ cssMix }} {{ 'promo--js' if js else 'promo--nojs' }}">
 	<h2 class="visually-hidden">{{ heading }}</h2>
 
 	{% if js %}
-		<button class="promo__control promo__control--prev" type="button" aria-label="{{ prevTitle }}"></button>
-		<button class="promo__control promo__control--next" type="button" aria-label="{{ nextTitle }}"></button>
+		<button
+			class="promo__control promo__control--prev"
+			type="button"
+			aria-label="{{ prevTitle }}"
+			data-step="-1"
+		></button>
+		<button
+			class="promo__control promo__control--next"
+			type="button"
+			aria-label="{{ nextTitle }}"
+			data-step="1"
+		></button>
 	{% endif %}
 
-	<ul class="promo__list {{ 'promo__list--js' if js else 'promo__list--nojs' }}">
+	<ul class="promo__list">
 		{% for slide in list %}
 			<li class="promo__item {{ 'promo__item--active' if not js or not loop.index0 }}">
 				<h3 class="visually-hidden">{{ slide.heading }}</h3>
@@ -42,7 +52,11 @@
 		<ul class="promo__dots">
 			{% for i in list %}
 				<li class="promo__dot">
-					<button class="promo__dotlink {{ 'promo__dotlink--active' if loop.index == 1 }}" type="button">
+					<button
+						class="promo__dot-link {{ 'promo__dot-link--active' if loop.index == 1 }}"
+						type="button"
+						data-i="{{ loop.index0 }}"
+					>
 						<span class="visually-hidden">{{ dotTitle }} {{ loop.index }}</span>
 					</button>
 				</li>

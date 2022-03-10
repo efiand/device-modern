@@ -57,11 +57,11 @@
 }
 
 .services__content {
+	display: none;
 	padding: 74px 260px 74px 116px;
 
-	& + & {
-		/* Временно до подключения js */
-		display: none;
+	&--active {
+		display: block;
 	}
 }
 
