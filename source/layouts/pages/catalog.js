@@ -125,26 +125,19 @@
 				},
 				linkTitle: 'Подробнее'
 			})),
-			moreButton: {
-				name: 'limit',
-				title: 'Загрузить ещё',
-				value: '8'
-			},
-			pager: {
-				list: ['1', '2', '3', '...', '15'].map((item, i) => ({
-					name: 'page',
-					title: item,
-					value: parseInt(item, 10) || i + 1
+			moreButton: Util.addBlankLink({
+				title: 'Загрузить ещё'
+			}),
+			pagination: {
+				list: ['1', '2', '3', '...', '15'].map((item) => Util.addBlankLink({
+					title: item
 				})),
-				next: {
-					name: 'page',
-					title: 'Вперёд',
-					value: '2'
-				},
-				prev: {
-					name: 'page',
+				next: Util.addBlankLink({
+					title: 'Вперёд'
+				}),
+				prev: Util.addBlankLink({
 					title: 'Назад'
-				}
+				})
 			},
 			sorting: {
 				action,

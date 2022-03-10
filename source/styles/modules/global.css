@@ -6,7 +6,10 @@ html {
 	--color-black-alter: #1a1a1a;
 	--color-darker: #363636;
 	--color-dark: #444444;
+	--color-dark-60: rgba(68, 68, 68, 0.6);
 	--color-dark-50: rgba(68, 68, 68, 0.5);
+	--color-dark-30: rgba(68, 68, 68, 0.3);
+	--color-dark-10: rgba(68, 68, 68, 0.1);
 	--color-darker-gray: #c4c4c4;
 	--color-dark-gray-alter: #cccccc;
 	--color-dark-gray: #cecece;

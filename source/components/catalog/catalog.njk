@@ -26,6 +26,12 @@
 						</li>
 					{% endfor %}
 				</ul>
+
+				<a class="catalog__more" href="{{ moreButton.href }}">{{ moreButton.title }}</a>
+
+				{% with pagination %}
+					{% include getComponentPath("pagination") %}
+				{% endwith %}
 			</div>
 		</div>
 	</div>
