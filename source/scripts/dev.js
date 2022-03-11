@@ -1,8 +1,9 @@
-import { Breakpoint } from './modules/breakpoints.js';
 import loadPP from 'pineglade-pp';
 
+const BREAKPOINT = 1240;
+
 window.pinegladePP = {
-	breakpoints: [Breakpoint.DESKTOP],
+	breakpoints: [BREAKPOINT],
 	folder: 'pixelperfect'
 };
 

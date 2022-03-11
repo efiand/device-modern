@@ -1,9 +1,9 @@
 import Form from '../components/form/form.js';
-import Modal from '../components/modal/modal.js';
 import Range from '../components/range/range.js';
 import Slider from './modules/slider.js';
+import { initModals } from 'pineglade-modal';
 
-export * from './modules/breakpoints.js';
+initModals();
 
 // Открываем все контролы, бессмысленные без наличия JS
 for (const noJsHiddenEl of document.querySelectorAll('.no-js-hidden')) {
@@ -12,10 +12,6 @@ for (const noJsHiddenEl of document.querySelectorAll('.no-js-hidden')) {
 
 for (const formEl of document.querySelectorAll('.form')) {
 	new Form(formEl);
-}
-
-for (const modalEl of document.querySelectorAll('.modal')) {
-	new Modal(modalEl);
 }
 
 for (const promoEl of document.querySelectorAll('.promo--js')) {
