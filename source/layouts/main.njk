@@ -23,16 +23,16 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body class="page">
-		{% include getComponentPath("page-header") %}
+		{% include getComponentPath('page-header') %}
 
 		<main>
 			{% block main %}
-				{% include getComponentPath("main-header") %}
+				{% include getComponentPath('main-header') %}
 			{% endblock %}
 		</main>
 
-		{% set cssMix = "page__footer" %}
-		{% include getComponentPath("page-footer") %}
+		{% set cssMix = 'page__footer' %}
+		{% include getComponentPath('page-footer') %}
 
 		{% if isDev %}
 			<ul hidden>

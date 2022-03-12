@@ -1,15 +1,15 @@
 <footer class="page-footer {{ cssMix }}" style="--logo-mask: url(../{{ logo.src }})">
 	<div class="centerer">
-		{% set cssMix = "page-footer__logo" %}
-		{% include getComponentPath("logo") %}
+		{% set cssMix = 'page-footer__logo' %}
+		{% include getComponentPath('logo') %}
 
 		<div class="page-footer__inner">
 			<address class="page-footer__content">
 				{{ address }}
 			</address>
 
-			{% with mainMenu | setProp("cssMix", "page-footer__nav") %}
-				{% include getComponentPath("main-nav") %}
+			{% with mainMenu | setProp('cssMix', 'page-footer__nav') %}
+				{% include getComponentPath('main-nav') %}
 			{% endwith %}
 
 			{% with tel %}
@@ -18,8 +18,8 @@
 				</p>
 			{% endwith %}
 
-			{% with social | setProp("cssMix", "page-footer__social") %}
-				{% include getComponentPath("social") %}
+			{% with social | setProp('cssMix', 'page-footer__social') %}
+				{% include getComponentPath('social') %}
 			{% endwith %}
 
 			<a class="page-footer__dev" href="{{ developer.href }}" style="--logo-mask: url(../{{ developer.logo.src }})">

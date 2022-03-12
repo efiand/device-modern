@@ -21,8 +21,8 @@
 			<li class="promo__item {{ 'promo__item--active' if not js or not loop.index0 }}">
 				<h3 class="visually-hidden">{{ slide.heading }}</h3>
 
-				{% with slide.image | setProp("cssMix", "promo__image") %}
-					{% include getComponentPath("picture") %}
+				{% with slide.image | setProp('cssMix', 'promo__image') %}
+					{% include getComponentPath('picture') %}
 				{% endwith %}
 
 				<div class="promo__content">

@@ -1,18 +1,18 @@
 <section class="catalog">
 	<div class="centerer catalog__inner">
 		<div>
-			<h2 class="catalog__heading catalog__heading--aside">{{ filter.heading | punctify(":") }}</h2>
+			<h2 class="catalog__heading catalog__heading--aside">{{ filter.heading | punctify(':') }}</h2>
 
 			{% with filter %}
-				{% include getComponentPath("filter") %}
+				{% include getComponentPath('filter') %}
 			{% endwith %}
 		</div>
 		<div>
 			<div class="catalog__header">
-				<h2 class="catalog__heading">{{ sorting.heading | punctify(":") }}</h2>
+				<h2 class="catalog__heading">{{ sorting.heading | punctify(':') }}</h2>
 
 				{% with sorting %}
-					{% include getComponentPath("sorting") %}
+					{% include getComponentPath('sorting') %}
 				{% endwith %}
 			</div>
 
@@ -21,7 +21,7 @@
 					{% for card in list %}
 						<li>
 							{% with card %}
-								{% include getComponentPath("card") %}
+								{% include getComponentPath('card') %}
 							{% endwith %}
 						</li>
 					{% endfor %}
@@ -30,7 +30,7 @@
 				<a class="catalog__more" href="{{ moreButton.href }}">{{ moreButton.title }}</a>
 
 				{% with pagination %}
-					{% include getComponentPath("pagination") %}
+					{% include getComponentPath('pagination') %}
 				{% endwith %}
 			</div>
 		</div>

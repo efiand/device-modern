@@ -10,9 +10,7 @@
 					class="catalog-nav__link {{ 'catalog-nav__link--current' if link.current }}"
 					href="{{ link.href }}"
 					{{ 'aria-current="page"' if link.current }}
-				>
-					{{ link.title }}
-				</a>
+				>{{ link.title }}</a>
 			</li>
 		{% endfor %}
 	</ul>

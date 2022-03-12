@@ -5,8 +5,8 @@
 				<a class="cart__link" href="{{ link.href }}">
 					{{ link.title }}
 
-					{% with link.image | setProp("cssMix", "cart__image") %}
-						{% include getComponentPath("picture") %}
+					{% with link.image | setProp('cssMix', 'cart__image') %}
+						{% include getComponentPath('picture') %}
 					{% endwith %}
 				</a>
 				<a class="cart__remover" href="{{ link.hrefToRemove }}">
@@ -18,7 +18,7 @@
 	<dl class="cart__params">
 		{% for param in ctx.params %}
 			<div class="cart__param">
-				<dt class="cart__value">{{ param.key | punctify(":") }}</dt>
+				<dt class="cart__value">{{ param.key | punctify(':') }}</dt>
 				<dd class="cart__value">{{ param.value }}</dd>
 			</div>
 		{% endfor %}
