@@ -3,6 +3,7 @@ html {
 	--color-black-60: rgba(0, 0, 0, 0.6);
 	--color-black-50: rgba(0, 0, 0, 0.5);
 	--color-black-30: rgba(0, 0, 0, 0.3);
+	--color-black-10: rgba(0, 0, 0, 0.1);
 	--color-black-alter: #1a1a1a;
 	--color-darker: #363636;
 	--color-dark: #444444;
@@ -17,6 +18,7 @@ html {
 	--color-light-gray-alter: #e5e5e5;
 	--color-light-gray: #ebebeb;
 	--color-light: #f0f0f0;
+	--color-light-90: rgba(240, 240, 240, 0.9);
 	--color-white: #ffffff;
 	--color-white-30: rgba(255, 255, 255, 0.3);
 	--color-white-10: rgba(255, 255, 255, 0.1);
@@ -82,13 +84,28 @@ ol {
 	list-style: none;
 }
 
-input {
+input,
+textarea {
 	box-sizing: border-box;
 	font: inherit;
 	border: none;
 	-webkit-text-fill-color: currentColor;
 	box-shadow: none;
 
+	&:disabled {
+		opacity: 0.3;
+	}
+
+	&:-webkit-autofill {
+		box-shadow: none;
+	}
+
+	&::placeholder {
+		opacity: 0.3;
+	}
+}
+
+input {
 	&[type="number"] {
 		appearance: textfield;
 
@@ -98,29 +115,17 @@ input {
 		}
 	}
 
-	&:-webkit-autofill {
-		box-shadow: none;
-	}
-
 	&::-webkit-search-decoration,
 	&::-webkit-search-cancel-button,
 	&::-webkit-search-results-button,
 	&::-webkit-search-results-decoration {
 		display: none;
 	}
-
-	&::placeholder {
-		opacity: 0.3;
-	}
-
-	&:disabled {
-		opacity: 0.3;
-	}
 }
 
 textarea {
 	overflow: auto;
-	resize: vertical;
+	resize: none;
 }
 
 img {

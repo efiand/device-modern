@@ -29,28 +29,26 @@
 	&::before {
 		content: "";
 		margin-right: 10px;
-		background: var(--icon);
-		background-repeat: no-repeat;
-		background-size: 100% auto;
+		background-color: currentColor;
 	}
 
 	&--user::before {
 		width: 13px;
 		height: 13px;
-		background-image: url("../images/sprite.min.svg#user");
+		mask-image: url("../images/sprite.min.svg#user");
 	}
 
 	&--sort::before {
 		width: 10px;
 		height: 12px;
-		background-image: url("../images/sprite.min.svg#sort");
+		mask-image: url("../images/sprite.min.svg#sort");
 	}
 
 	&--cart::before {
-		width: 16px;
+		width: 14px;
 		height: 14px;
-		margin-left: -6px;
-		background-image: url("../images/sprite.min.svg#cart");
+		margin-left: -3px;
+		mask-image: url("../images/sprite.min.svg#cart");
 	}
 
 	&--extend {

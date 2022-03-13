@@ -25,4 +25,13 @@
 	{% with subscribe %}
 		{% include getComponentPath('subscribe') %}
 	{% endwith %}
+
+	{% macro getForm() %}
+		{% with form %}
+			{% include getComponentPath('form') %}
+		{% endwith %}
+	{% endmacro %}
+	{% with modal | setProp('slot', getForm()) %}
+		{% include getComponentPath('modal') %}
+	{% endwith %}
 {% endblock %}

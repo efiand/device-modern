@@ -1,4 +1,4 @@
-import Form from '../components/form/form.js';
+import NumberGroup from './modules/number-group.js';
 import Range from '../components/range/range.js';
 import Slider from './modules/slider.js';
 import { initModals } from 'pineglade-modal';
@@ -10,8 +10,8 @@ for (const noJsHiddenEl of document.querySelectorAll('.no-js-hidden')) {
 	noJsHiddenEl.classList.remove('no-js-hidden');
 }
 
-for (const formEl of document.querySelectorAll('.form')) {
-	new Form(formEl);
+for (const numberGroupEl of document.querySelectorAll('.form__controls')) {
+	new NumberGroup(numberGroupEl);
 }
 
 for (const promoEl of document.querySelectorAll('.promo--js')) {
