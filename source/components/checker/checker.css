@@ -37,8 +37,10 @@
 		opacity: 0;
 		transition: inherit;
 	}
+}
 
-	&--radio {
+.checker__input {
+	&[type="radio"] + .checker__label {
 		&::before {
 			border-radius: 50%;
 		}
@@ -47,19 +49,17 @@
 			mask-image: url("../images/sprite.min.svg#circle");
 		}
 	}
-}
 
-.checker__input {
-	&:disabled ~ .checker__label {
+	&:disabled + .checker__label {
 		opacity: 0.1;
 	}
 
-	&:focus-visible ~ .checker__label::before {
+	&:focus-visible + .checker__label::before {
 		outline: var(--focus-outline);
 		outline-offset: 2px;
 	}
 
-	&:checked ~ .checker__label {
+	&:checked + .checker__label {
 		&::before {
 			border-color: currentColor;
 		}
