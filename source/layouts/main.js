@@ -10,7 +10,7 @@
 
 	return {
 		accentLink: {
-			href: 'blank.html',
+			href: 'modal.html',
 			modalId,
 			title: 'Доставим редкий товар под заказ'
 		},
@@ -262,8 +262,7 @@
 								title: 'Профессиональная<br>селфи-палка'
 							}
 						].map((item, i) => ({
-							...item,
-							href: 'cart.html',
+							...Util.addBlankLink(item),
 							hrefToRemove: 'blank.html',
 							image: {
 								height: 43,
@@ -272,10 +271,9 @@
 								width: 39
 							}
 						})),
-						openLink: {
-							href: 'cart.html',
+						openLink: Util.addBlankLink({
 							title: 'Открыть корзину'
-						},
+						}),
 						params: [
 							{
 								key: 'Товаров',
