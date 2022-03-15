@@ -1,27 +1,16 @@
 .select {
 	position: relative;
-
-	&::after {
-		content: "";
-		position: absolute;
-		top: 10px;
-		right: 0;
-		width: 11px;
-		height: 11px;
-		background-color: currentColor;
-		mask-image: url("../images/sprite.min.svg#arrow");
-		transform: rotate(90deg);
-	}
-}
-
-.select__control {
 	box-sizing: border-box;
 	width: 100%;
 	padding: 0;
 	font-size: inherit;
 	line-height: 30px;
 	background-color: transparent;
+	background-image: url("../images/sprite.min.svg#arrow-down");
+	background-repeat: no-repeat;
+	background-position: right -6px top 50%;
 	border: none;
+	cursor: pointer;
 	appearance: none;
 
 	&:hover {
@@ -29,6 +18,7 @@
 	}
 
 	&:active {
+		outline: none;
 		opacity: 0.3;
 	}
 
