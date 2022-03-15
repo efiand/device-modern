@@ -65,6 +65,7 @@
 								value: 'red'
 							},
 							{
+								disabled: true,
 								label: 'Розовый',
 								value: 'pink'
 							}
