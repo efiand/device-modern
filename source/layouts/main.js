@@ -4,10 +4,16 @@
 		href: !item.href && item.href !== null ? 'blank.html' : item.href
 	});
 
-	const phoneNumber = '+7 (812) 812-12-12';
 	const action = 'https://echo.htmlacademy.ru';
+	const modalId = 'order';
+	const phoneNumber = '+7 (812) 812-12-12';
 
 	return {
+		accentLink: {
+			href: 'blank.html',
+			modalId,
+			title: 'Доставим редкий товар под заказ'
+		},
 		action,
 		address: 'Санкт-Петербург, набережная реки Карповки, 5, литера П.',
 		breadcrumbs: {
@@ -52,6 +58,51 @@
 				width: '115'
 			}
 		},
+		form: {
+			action,
+			fields: [
+				{
+					icon: 'user',
+					label: 'Ваше имя',
+					message: 'Добавьте имя',
+					name: 'username',
+					placeholder: 'Введите имя',
+					required: true,
+					type: 'text'
+				},
+				{
+					icon: 'letter',
+					label: 'Ваш e-mail',
+					message: 'Забавный у вас адрес',
+					name: 'email',
+					placeholder: 'Введите адрес электронной почты',
+					required: true,
+					type: 'email',
+					value: 'почта'
+				},
+				{
+					label: 'Что нужно привезти',
+					name: 'comment',
+					placeholder: 'В свободной форме',
+					type: 'textarea'
+				},
+				{
+					label: 'Количество',
+					max: '999',
+					min: '1',
+					name: 'quantity',
+					required: true,
+					step: '1',
+					tooltip: 'Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.',
+					type: 'number',
+					value: '1'
+				}
+			],
+			formId: modalId,
+			stepDownText: 'Меньше',
+			stepUpText: 'Больше',
+			submitText: 'Отправить'
+		},
 		heading: 'Страница в разработке',
 		lang: 'ru',
 		logo: {
@@ -75,6 +126,11 @@
 					title: 'Контакты'
 				}
 			].map(Util.addBlankLink)
+		},
+		modal: {
+			closeTitle: 'Закрыть',
+			heading: 'Доставка под заказ',
+			modalId
 		},
 		postProcess({ breadcrumbs, breadcrumbsTail, title }) {
 			breadcrumbs.list = [
