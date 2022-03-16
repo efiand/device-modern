@@ -5,6 +5,7 @@
 	&--nojs {
 		& .promo__item + .promo__item {
 			margin-top: 130px;
+			background-image: inherit;
 			border-top: 186px solid var(--color-yellow-light);
 		}
 	}
@@ -13,6 +14,7 @@
 .promo__list {
 	counter-reset: slider;
 	margin: 0;
+	background-image: linear-gradient(var(--color-yellow-light) 114px, transparent 114px);
 
 	& > li {
 		counter-increment: slider;
@@ -20,14 +22,22 @@
 }
 
 .promo__item {
-	position: relative;
-	display: none;
-	background-image: linear-gradient(var(--color-yellow-light) 114px, transparent 114px);
+	position: absolute;
+	top: 0;
+	display: grid;
+	grid-template-columns: 560px 1fr;
+	gap: 40px;
+	visibility: hidden;
+	transform: scale(0);
+	opacity: 0;
+	transition: transform 0.3s;
+	will-change: transform;
 
 	&--active {
-		display: grid;
-		grid-template-columns: 560px 1fr;
-		gap: 40px;
+		position: relative;
+		visibility: visible;
+		transform: scale(1);
+		opacity: 1;
 	}
 
 	&::before {
