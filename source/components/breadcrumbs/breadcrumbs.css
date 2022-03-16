@@ -13,10 +13,10 @@
 	&::after {
 		content: "";
 		position: absolute;
-		top: 4px;
-		right: 12px;
-		width: 12px;
-		height: 12px;
+		top: 6px;
+		right: 14px;
+		width: 7px;
+		height: 7px;
 		background-color: currentColor;
 		mask-image: url("../images/sprite.min.svg#arrow");
 		opacity: 0.2;
