@@ -1,6 +1,8 @@
 {% extends 'layouts/main.njk' %}
 
 {% block main %}
+	{% include getComponentPath('main-header') %}
+
 	{% with accentLink | setProp('cssMix', 'centerer') %}
 		{% include getComponentPath('promo-button') %}
 	{% endwith %}
