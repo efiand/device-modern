@@ -8,9 +8,11 @@
 				{{ address }}
 			</address>
 
-			{% with mainMenu | setProp('cssMix', 'page-footer__nav') %}
-				{% include getComponentPath('main-nav') %}
-			{% endwith %}
+			<nav class="page-footer__nav">
+				{% with mainMenu %}
+					{% include getComponentPath('main-nav') %}
+				{% endwith %}
+			</nav>
 
 			{% with tel %}
 				<p class="page-footer__content page-footer__content--tel">

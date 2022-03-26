@@ -52,6 +52,7 @@
 }
 
 .page-footer__nav {
+	display: flex;
 	justify-content: center;
 	order: -1;
 	margin: -3px 0 0 -52px;

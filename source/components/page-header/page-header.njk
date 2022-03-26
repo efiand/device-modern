@@ -14,7 +14,9 @@
 		{% include getComponentPath('catalog-nav') %}
 	{% endwith %}
 
-	{% with mainMenu | setProp('cssMix', 'page-header__main-nav') %}
-		{% include getComponentPath('main-nav') %}
-	{% endwith %}
+	<nav class="page-header__main-nav">
+		{% with mainMenu %}
+			{% include getComponentPath('main-nav') %}
+		{% endwith %}
+	</nav>
 </header>

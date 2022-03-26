@@ -1,8 +1,17 @@
 .catalog-nav {
 	position: relative;
+	z-index: 1;
 
-	&:focus-within .catalog-nav__toggler::after {
-		mask-image: url("../images/sprite.min.svg#minus");
+	&:hover,
+	&:focus-within {
+		& .catalog-nav__list {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		& .catalog-nav__toggler::after {
+			mask-image: url("../images/sprite.min.svg#minus");
+		}
 	}
 }
 
@@ -62,19 +71,12 @@
 	gap: 15px 30px;
 	box-sizing: border-box;
 	width: 1160px;
-	margin-top: 4px;
-	padding: 7px 455px 56px 60px;
+	margin: 0;
+	padding: 11px 455px 56px 60px;
 	visibility: hidden;
 	background-color: var(--color-yellow-light);
 	opacity: 0.01;
 	transition: visibility 0.3s, opacity 0.3s;
-
-	&:hover,
-	&:focus-within,
-	.catalog-nav__toggler:focus + & {
-		visibility: visible;
-		opacity: 1;
-	}
 }
 
 .catalog-nav__item {
