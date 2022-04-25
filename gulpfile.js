@@ -45,7 +45,6 @@ const Path = {
 	}
 };
 if (!IS_DEV) {
-	Path.Build.CSS.push('!source/styles/dev.css');
 	Path.Build.JS.push('!source/scripts/dev.js');
 }
 
