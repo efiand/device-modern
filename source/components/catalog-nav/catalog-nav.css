@@ -26,6 +26,10 @@
 	background-color: transparent;
 	cursor: pointer;
 
+	&:focus-visible {
+		z-index: 3; /* outline-offset should be on the dropdown */
+	}
+
 	&::before,
 	&::after {
 		content: "";

@@ -2,7 +2,7 @@
 
 Учебный проект Device от HTML Academy.
 
-[Опубликованная версия](https://efiand.github.io/device-modern)
+[Опубликованная версия](https://efiand.github.io/device)
 
 
 ## Используемые инструменты
